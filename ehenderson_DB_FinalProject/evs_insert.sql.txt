@@ -1,0 +1,94 @@
+//POPULATE PERSON TABLE
+
+insert into person values(0, 15, "Henderson");
+insert into person values(1, 20, "Baker");
+insert into person values(2, 15, "Reagan");
+insert into person values(3, 15, "Abbott");
+insert into person values(4, 20, "Benson");
+insert into person values(5, 20, "Martinez");
+
+//POPULATE COUNTY TABLE
+
+insert into county values(15, 15, "Grayson");
+insert into county values(20, 20, "Travis");
+
+//POPULATE STATE TABLE
+
+insert into state values(15, "Texas");
+insert into state values (20, "Arkansas");
+
+//POPULATE LOCAL_CONTEST TABLE
+
+insert into local_contest values(15, 50);
+insert into local_contest values(20, 60);
+
+//POPULATE STATE_CONTEST TABLE
+
+insert into state_contest values(15, 70);
+insert into state_contest values(20, 80);
+
+//POPULATE NATIONAL CONTEST TABLE
+
+insert into national_contest values(90);
+
+//POPULATE CONTEST TABLE
+
+insert into contest values(50, 1, "mayor2024");
+insert into contest values(60, 1, "mayor2024");
+insert into contest values(70, 1, "governor2024");
+insert into contest values(80, 1, "governor2024");
+insert into contest values(90, 1, "president2024");
+
+//POPULATE ELECTION TABLE
+
+insert into election values(1, "may-2024);
+
+//POPULATE CANDIDATE TABLE
+
+insert into candidate values(2, "mayor, governor, president");
+insert into candidate values(3, "mayor, governor");
+insert into candidate values(4, "mayor, governor");
+insert into candidate values(5, "mayor, governor, president");
+
+//POPULATE RUNS_IN TABLE
+
+insert into runs_in values(2, 50, 0);
+insert into runs_in values(2, 70, 0);
+insert into runs_in values(2, 90, 0);
+insert into runs_in values (3, 50, 0);
+insert into runs_in values(3, 70, 0);
+insert into runs_in values(4, 60, 0);
+insert into runs_in values(4, 80, 0);
+insert into runs_in values(5, 60, 0);
+insert into runs_in values(5, 80, 0);
+insert into runs_in values(5, 90, 0);
+
+//POPULATE VOTER TABLE
+
+insert into voter values(0);
+insert into voter values(1);
+insert into voter values(2);
+insert into voter values(3);
+insert into voter values(4);
+insert into voter values(5);
+
+//POPULATE VOTED_FOR TABLE
+
+insert into voted_for values(0, 50);
+insert into voted_for values(0, 70);
+insert into voted_for values(0, 90);
+insert into voted_for values(1, 60);
+insert into voted_for values(1, 80);
+insert into voted_for values(1, 90);
+insert into voted_for values(2, 50);
+insert into voted_for values(2, 70);
+insert into voted_for values(2, 90);
+insert into voted_for values(3, 50);
+insert into voted_for values(3, 70);
+insert into voted_for values(3, 90);
+insert into voted_for values(4, 60);
+insert into voted_for values(4, 80);
+insert into voted_for values(4, 90);
+insert into voted_for values(5, 60);
+insert into voted_for values(5, 80);
+insert into voted_for values(5, 90);

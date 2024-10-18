@@ -1,0 +1,89 @@
+create table person
+(ID varchar (8),
+county_id varchar (8) not null,
+name varchar (20),
+primary key (ID, county_id),
+foreign key (county_id) references county
+);
+
+create table county
+(county_id varchar (8),
+state_id varchar (8) not null,
+county_name varchar (20),
+primary key (county_id, state_id),
+foreign key (state_id) references state
+);
+
+create table state
+(state_id varchar (8),
+state_name varchar (20),
+primary key (state_id)
+);
+
+create table candidate
+(cand_id varchar (8), 
+platform varchar (20),
+primary key (cand_id),
+foreign key (cand_id) references person (ID)
+);
+
+create table voter
+(v_id varchar (8),
+primary key (v_id),
+foreign key (v_id) references person(ID)
+);
+
+create table runs_in
+(cand_id varchar (8),
+contest_id varchar (8),
+tally numeric (4,0),
+primary key (cand_id, contest_id),
+foreign key (cand_id) references candidate,
+foreign key contest_id references contest
+);
+
+create table voted
+(v_id varchar (8),
+contest_id varchar (8),
+primary key (v_id, contest_id),
+foreign key (v_id) references voter,
+foreign key (contest_id) references contest
+);
+
+create table local_contest
+(county_id varchar (8) not null, 
+contest_id varchar (8),
+primary key (contest_id),
+foreign key (county_id) references county,
+foreign key (contest_id) references contest
+);
+
+create table state_contest
+(state_id varchar (8) not null,
+contest_id varchar(8), 
+primary key (contest_id), 
+foreign key (state_id) references state,
+foreign key (contest_id) references contest
+);
+
+create table national_contest
+(contest_id varchar (8), 
+primary key (contest_id), 
+foreign key (contest_id) references contest
+);
+
+create table contest
+(contest_id varchar (8), 
+election_id varchar (8) not null, 
+description varchar (20), 
+primary key (contest_id), 
+foreign key (election_id) references election
+);
+
+create table election
+(election_id varchar (8), 
+description varchar (20), 
+primary key (election_id)
+);
+
+
